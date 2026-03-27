@@ -2,6 +2,23 @@ import { TrendingUp, Zap, Smartphone, Sparkles } from "lucide-react";
 
 export default function BenefitsSection() {
   const benefits = [
+
+
+        {
+      title: "انطباع قوى و تجربة شراء فريدة لعميلك",
+      icon: <Sparkles className="w-10 h-10" />,
+      content: (
+        <p className="text-slate-400 text-xl md:text-2xl leading-relaxed font-medium">
+          صفحة منتج سهلة مستوحاة من اكبر منصات التجارة كـ <span className="text-white font-black">amazon</span>
+          <br />
+          امكانية الدفع و رفع وصل <span className="text-white font-black">انستاباى و فودافون كاش</span>
+          <br />
+          صفحة <span className="text-white font-black">متابعة</span> حالة الطلب
+          <br />
+          رسالة <span className="text-white font-black">تأكيدية</span> لطلب عميلك عن طريق الواتس اب
+        </p>
+      )
+    },
     {
       title: "عائد اكبر لاعلاناتك",
       icon: <TrendingUp className="w-10 h-10" />,
@@ -26,6 +43,7 @@ export default function BenefitsSection() {
         </p>
       )
     },
+
     {
       title: "سهولة الاستخدام",
       icon: <Smartphone className="w-10 h-10" />,
@@ -39,21 +57,7 @@ export default function BenefitsSection() {
         </p>
       )
     },
-    {
-      title: "انطباع قوى و تجربة شراء فريدة لعميلك",
-      icon: <Sparkles className="w-10 h-10" />,
-      content: (
-        <p className="text-slate-400 text-xl md:text-2xl leading-relaxed font-medium">
-          صفحة منتج سهلة مستوحاة من اكبر منصات التجارة كـ <span className="text-white font-black">amazon</span>
-          <br />
-          امكانية الدفع و رفع وصل <span className="text-white font-black">انستاباى و فودافون كاش</span>
-          <br />
-          صفحة <span className="text-white font-black">متابعة</span> حالة الطلب
-          <br />
-          رسالة <span className="text-white font-black">تأكيدية</span> لطلب عميلك عن طريق الواتس اب
-        </p>
-      )
-    }
+
   ];
 
   return (

@@ -19,9 +19,9 @@ export default function Home() {
       <div id="comparison"><ComparisonChart /></div>
       <div id="dashboard"><DashboardOverview /></div>
       <div id="features"><FeaturesSection /></div>
-      <div id="custom-code"><CustomCodeSection /></div>
       {/* <div id="pricing"><PricingSection /></div> */}
       <div id="faq"><FaqSection /></div>
+      <div id="custom-code"><CustomCodeSection /></div>
       <Footer />
       <FloatingWhatsApp />
     </main>

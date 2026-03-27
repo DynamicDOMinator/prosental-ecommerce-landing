@@ -3,7 +3,7 @@ import { PlayCircle } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden pt-20 pb-16 lg:pt-32 lg:pb-24">
+    <section className="relative overflow-hidden pt-22 pb-16 lg:pt-32 lg:pb-24">
       <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-primary-500/10 to-transparent -z-10"></div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto space-y-8">
