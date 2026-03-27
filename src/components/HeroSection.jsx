@@ -6,9 +6,7 @@ export default function HeroSection() {
       <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-primary-500/10 to-transparent -z-10"></div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto space-y-8">
-          <div className="inline-block px-4 py-1.5 rounded-full border border-primary-500/30 bg-primary-500/10 text-primary-400 font-medium text-sm mb-4">
-            ثورة في عالم التجارة الإلكترونية
-          </div>
+        
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight md:leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-l from-primary-600 to-emerald-300">
               طوّر{" "}
