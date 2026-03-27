@@ -16,7 +16,7 @@ export default function HeroSection() {
             علامتك التجارية
           </h1>
           <p className="text-xl md:text-2xl text-slate-100 font-medium leading-relaxed max-w-3xl mx-auto">
-            مع أدوات زيادة المبيعات ووسائل دفع محلية جاهزة فودافون كاش، انستاباي
+         صفحة منتج سهلة علي عميلك, اضافات تزود ارباحك , متابعة و تحديث سهل من هاتفك
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <button className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] w-full sm:w-auto">
