@@ -1,61 +1,73 @@
-import { 
-  TrendingUp, 
-  ShieldCheck, 
-  MapPin, 
-  Zap, 
-  MessageSquare, 
-  Wallet, 
-  ArrowUpRight, 
-  Mail, 
-  Globe 
-} from "lucide-react";
-
 export default function BenefitsSection() {
   const benefits = [
     {
-      icon: <TrendingUp className="w-8 h-8 text-white" />,
-      color: "bg-primary-500",
-      title: "زيادة العائد على الإعلانات بميزات متقدمة",
-      description: "عروض زيادة المبيعات بعد الشراء (Post-purchase Upsell) لضمان أقصى ربحية من كل عميل."
+      title: "عائد اكبر لاعلاناتك",
+      content: (
+        <p className="text-slate-400 text-xl md:text-2xl leading-relaxed font-medium">
+          تطبيقات <span className="text-white font-black">upsell, bundles</span> لزيادة متوسط سعر الطلب
+          <br />
+          صفحة <span className="text-white font-black">post purchase</span> لأقتراح منتجات <span className="text-primary-500 font-black">اضافية لعميلك</span> بعد عملية البيع الاولى
+        </p>
+      )
     },
     {
-      icon: <Zap className="w-8 h-8 text-white" />,
-      color: "bg-primary-500",
-      title: "ميزات تقنية متقدمة",
-      description: "تنبيهات فورية بحالة الطلب لفريق عملك عبر البريد الإلكتروني وواتساب للمتابعة اللحظية."
+      title: "ميزات متقدمة",
+      content: (
+        <p className="text-slate-400 text-xl md:text-2xl leading-relaxed font-medium">
+          امكانية انشاء حساب للعملاء لمتابعة اكثر من طلب
+          <br />
+          او متابعة كل طلب <span className="text-white font-black">عن طريق الايميل</span> المرسل لهم
+          <br />
+          ارسال <span className="text-white font-black">تفاصيل الطلبات</span> للمسؤولين عن طريق الواتس اب او الايميل
+        </p>
+      )
     },
     {
-      icon: <ShieldCheck className="w-8 h-8 text-white" />,
-      color: "bg-primary-500",
-      title: "مظهر احترافي يبني ثقة عملائك",
-      description: "توفير صفحة تتبع الطلبات وتأكيد الشراء آلياً عبر واتساب لتعزيز مصداقية متجرك."
+      title: "سهولة الاستخدام",
+      content: (
+        <p className="text-slate-400 text-xl md:text-2xl leading-relaxed font-medium">
+          التحكم الكامل فى اى وقت <span className="text-white font-black">عن طريق الهاتف</span>
+          <br />
+          تعيين <span className="text-white font-black">صلاحيات</span> لكل فرد فى شركتك
+          <br />
+          ترجمة فورية <span className="text-white font-black">بالAI</span> للغة التانية
+        </p>
+      )
     },
     {
-      icon: <Globe className="w-8 h-8 text-white" />,
-      color: "bg-primary-500",
-      title: "مثالي للسوق المصري",
-      description: "تفعيل نظام الدفع بضغطة واحدة عبر انستاباي والمحافظ الإلكترونية (VC) لتسهيل الشراء."
+      title: "انطباع قوى و تجربة شراء فريدة لعميلك",
+      content: (
+        <p className="text-slate-400 text-xl md:text-2xl leading-relaxed font-medium">
+          صفحة منتج سهلة مستوحاة من اكبر منصات التجارة كـ <span className="text-white font-black">amazon</span>
+          <br />
+          امكانية الدفع و رفع وصل <span className="text-white font-black">انستاباى و فودافون كاش</span>
+          <br />
+          صفحة <span className="text-white font-black">متابعة</span> حالة الطلب
+          <br />
+          رسالة <span className="text-white font-black">تأكيدية</span> لطلب عميلك عن طريق الواتس اب
+        </p>
+      )
     }
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[400px] bg-primary-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+    <section className="py-24 relative overflow-hidden bg-slate-950/20">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-6xl h-[600px] bg-primary-500/5 blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">ميزات ستغير مسار <span className="text-primary-500">مشروعك</span></h2>
-          <p className="text-slate-400 text-lg">كل ما تحتاجه للتميز والنمو في سوق التجارة الإلكترونية المصري بذكاء واحترافية.</p>
+        <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+          <h2 className="text-4xl md:text-6xl font-black mb-6 leading-tight">ميزات ستغير مسار <span className="text-primary-500">مشروعك</span></h2>
+          <p className="text-slate-400 text-xl md:text-2xl font-medium">كل ما تحتاجه للتميز والنمو في سوق التجارة الإلكترونية بذكاء واحترافية.</p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, i) => (
-            <div key={i} className="bg-slate-900/80 backdrop-blur-sm border border-slate-800 p-8 rounded-3xl hover:border-slate-600 transition-all duration-300 group hover:-translate-y-1">
-              <div className={`w-16 h-16 rounded-2xl ${benefit.color} flex items-center justify-center mb-6 shadow-lg transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
-                {benefit.icon}
+            <div key={i} className="bg-slate-900/40 backdrop-blur-md border-2 border-slate-800 p-10 md:p-14 rounded-[3rem] hover:border-primary-500/30 transition-all duration-500 group flex flex-col items-center justify-center text-center relative overflow-hidden shadow-2xl">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary-500/5 blur-3xl -z-10 group-hover:bg-primary-500/10 transition-colors"></div>
+              <h3 className="text-3xl md:text-4xl font-black mb-8 text-white group-hover:text-primary-500 transition-colors">{benefit.title}</h3>
+              <div className="space-y-4">
+                {benefit.content}
               </div>
-              <h3 className="text-2xl font-bold mb-3">{benefit.title}</h3>
-              <p className="text-slate-400 text-lg leading-relaxed">{benefit.description}</p>
             </div>
           ))}
         </div>

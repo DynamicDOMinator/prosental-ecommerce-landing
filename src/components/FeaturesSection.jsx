@@ -4,7 +4,7 @@ export default function FeaturesSection() {
   const offerItems = [
     {
       title: "نقوم بضبط متجرك بالكامل",
-      description: "سنقوم بإنشاء متجرك وإضافة حتى 50 منتجاً لبدء البيع فوراً.",
+      description: "سنقوم بإنشاء متجرك وإضافة حتى 50 منتجاً لبدء البيع .",
       icon: <Store className="w-8 h-8 text-primary-500" />,
       value: null
     },
@@ -100,7 +100,7 @@ export default function FeaturesSection() {
                       </div>
                       <div className="space-y-3">
                          <h3 className="text-2xl md:text-4xl font-black text-white ">
-                           سنقوم بإنشاء متجرك وإضافة حتى 50 منتجاً فوراً.
+                           سنقوم بإنشاء متجرك وإضافة حتى 50 منتجاً .
                          </h3>
                        
                       </div>
