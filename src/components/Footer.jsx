@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex items-center justify-center gap-6 text-sm text-slate-400 mb-8">
           <a href="#" className="hover:text-primary-500 transition-colors">عن القالب</a>
           <a href="#" className="hover:text-primary-500 transition-colors">الميزات</a>
-          <a href="#" className="hover:text-primary-500 transition-colors">الأسعار</a>
+         
           <a href="#" className="hover:text-primary-500 transition-colors">تواصل معنا</a>
         </div>
         <p className="text-slate-600 text-sm">

@@ -16,7 +16,7 @@ export default function Navbar() {
         setIsScrolled(false);
       }
     };
-    
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -26,7 +26,6 @@ export default function Navbar() {
     { name: "الفوائد", href: "#benefits" },
     { name: "المميزات", href: "#features" },
     { name: "لوحة التحكم", href: "#dashboard" },
-    { name: "الأسعار", href: "#pricing" },
     { name: "الأسئلة الشائعة", href: "#faq" },
   ];
 
@@ -57,8 +56,11 @@ export default function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center flex-row-reverse justify-between">
           <div className="shrink-0">
-            <a href="#hero" onClick={(e) => handleLinkClick(e, "#hero")} className="flex items-center gap-2">
-            
+            <a
+              href="#hero"
+              onClick={(e) => handleLinkClick(e, "#hero")}
+              className="flex items-center gap-2"
+            >
               <span className="text-xl font-bold text-white tracking-wide">
                 Prosental
               </span>
@@ -80,7 +82,6 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
-       
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -98,7 +99,9 @@ export default function Navbar() {
       {/* Mobile Nav */}
       <div
         className={`md:hidden absolute top-full left-0 right-0 bg-slate-900 border-b border-slate-800 shadow-xl overflow-hidden transition-all duration-300 origin-top ${
-          isMobileMenuOpen ? "max-h-96 opacity-100 py-4" : "max-h-0 opacity-0 py-0"
+          isMobileMenuOpen
+            ? "max-h-96 opacity-100 py-4"
+            : "max-h-0 opacity-0 py-0"
         }`}
       >
         <div className="container mx-auto px-4 flex flex-col gap-4">
