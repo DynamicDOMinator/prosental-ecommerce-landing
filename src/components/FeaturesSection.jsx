@@ -99,12 +99,10 @@ export default function FeaturesSection() {
                          <Store className="w-8 h-8" />
                       </div>
                       <div className="space-y-3">
-                         <h3 className="text-2xl md:text-4xl font-black text-white lg:leading-[1.1]">
+                         <h3 className="text-2xl md:text-4xl font-black text-white ">
                            سنقوم بإنشاء متجرك وإضافة حتى 50 منتجاً فوراً.
                          </h3>
-                         <p className="text-primary-500 text-2xl md:text-3xl font-black animate-pulse">
-                           باقي 10 أماكن فقط
-                         </p>
+                       
                       </div>
                    </div>
 
