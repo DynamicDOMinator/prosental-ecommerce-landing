@@ -42,7 +42,7 @@ export default function FeaturesSection() {
 
         <div className="max-w-4xl mx-auto space-y-12">
           
-          {/* Top Value Box */}
+          {/* Top Value Box (Static Features) */}
           <div className="bg-slate-900/40 border-2 border-slate-800 rounded-[3rem] p-10 md:p-16 relative overflow-hidden group hover:border-slate-700 transition-all duration-500 shadow-2xl">
              <div className="absolute top-0 right-0 w-64 h-64 bg-primary-500/5 blur-[100px] -z-10 rounded-full"></div>
              
@@ -72,29 +72,6 @@ export default function FeaturesSection() {
                      متجرك ملكك بالكامل، تدفع فقط ثمن الاستضافة، ولا توجد أي رسوم إضافية (0%).
                    </p>
                 </div>
-
-                {/* Divider Line */}
-                <div className="relative py-4">
-                  <div className="w-full h-[2px] bg-linear-to-r from-transparent via-slate-700 to-transparent"></div>
-                </div>
-
-                {/* Item 3 (Value Added) */}
-                <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-right pt-2 border border-primary-500/10 bg-primary-500/5 p-8 rounded-4xl">
-                   <div className="space-y-3 flex-1">
-                      <div className="flex items-center gap-4 justify-center md:justify-start">
-                         <Calendar className="w-8 h-8 text-primary-500" />
-                         <h3 className="text-2xl md:text-4xl font-black text-white">جلسة استراتيجية (60 دقيقة)</h3>
-                      </div>
-                      <p className="text-slate-400 text-xl md:text-2xl leading-relaxed font-medium">
-                        سنساعدك في تفصيل مكسبك ليناسب مميزاتنا المتقدمة (العروض المجمعة، إلخ.. لبيع المزيد).
-                      </p>
-                   </div>
-                   <div className="shrink-0 bg-slate-950 p-6 rounded-3xl border border-slate-800 min-w-[200px] shadow-xl">
-                      <p className="text-slate-500 text-sm font-black uppercase tracking-widest mb-2">بقيمة</p>
-                      <span className="text-3xl font-black text-primary-500">1,000 جنيه</span>
-                      <div className="mt-2 text-xs text-center font-black text-white uppercase tracking-tighter">مجاناً لأول 10</div>
-                   </div>
-                </div>
              </div>
           </div>
 
@@ -105,26 +82,58 @@ export default function FeaturesSection() {
              </div>
           </div>
 
-          {/* Bottom Offer Box */}
-          <div className="bg-slate-900/60 border-4 border-primary-500/30 rounded-[2.5rem] p-10 md:p-14 group hover:border-primary-500/50 transition-all duration-500 relative overflow-hidden shadow-[0_0_50px_rgba(16,185,129,0.1)]">
+          {/* Bottom Offer Box (The Bundle) */}
+          <div className="bg-slate-900/60 border-4 border-primary-500/30 rounded-[2.5rem] p-10 md:p-14 group hover:border-primary-500/50 transition-all duration-500 relative overflow-hidden shadow-[0_0_50px_rgba(16,185,129,0.1)] hover:shadow-[0_0_80px_rgba(16,185,129,0.2)]">
              <div className="absolute inset-0 bg-primary-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
              
-             <div className="flex flex-col md:flex-row items-center justify-between gap-10 relative z-10">
-                <div className="space-y-4 text-center md:text-right flex-1">
-                   <div className="flex flex-col md:flex-row items-center gap-4 md:gap-5 justify-center md:justify-start">
-                      <div className="p-4 bg-slate-950 border border-slate-800 rounded-2xl text-primary-500 group-hover:scale-110 transition-transform">
+             {/* Ribbon Badge Header (Ribbon style as requested) */}
+             <div className="absolute -right-24 top-10 bg-primary-500 text-white font-black py-2 px-24 rotate-45 border-y border-white/20 shadow-2xl text-lg text-center z-20">
+                مجاناً لأول 10 عملاء
+             </div>
+
+             <div className="flex flex-col gap-12 relative z-10">
+                <div className="space-y-10 text-center md:text-right flex-1">
+                   {/* Setup Header (Main Point) */}
+                   <div className="flex flex-col lg:mr-13 md:flex-row items-center md:items-start gap-6">
+                      <div className="p-4 bg-slate-950 border border-slate-800 rounded-2xl text-primary-500 shrink-0">
                          <Store className="w-8 h-8" />
                       </div>
-                      <h3 className="text-3xl md:text-5xl font-black text-white leading-tight">
-                        باقي <span className="text-primary-500 animate-pulse">10</span> أماكن فقط
-                      </h3>
+                      <div className="space-y-3">
+                         <h3 className="text-2xl md:text-4xl font-black text-white lg:leading-[1.1]">
+                           سنقوم بإنشاء متجرك وإضافة حتى 50 منتجاً فوراً.
+                         </h3>
+                         <p className="text-primary-500 text-2xl md:text-3xl font-black animate-pulse">
+                           باقي 10 أماكن فقط
+                         </p>
+                      </div>
                    </div>
-                   <p className="text-slate-300 text-xl md:text-3xl font-black mt-2">سنقوم بإنشاء متجرك وإضافة حتى 50 منتجاً فوراً.</p>
+
+                   {/* Strategy Session (Sub Point) */}
+                   <div className="pt-8 border-t border-slate-800 lg:mr-13 flex flex-col md:flex-row items-center md:items-start gap-6">
+                      <div className="p-4 bg-slate-950 border border-slate-800 rounded-2xl text-primary-500 shrink-0">
+                         <Calendar className="w-8 h-8" />
+                      </div>
+                      <div className="space-y-2">
+                         <h4 className="text-2xl md:text-3xl font-black text-white">جلسة استراتيجية (60 دقيقة)</h4>
+                         <p className="text-slate-400 text-xl leading-relaxed">
+                 سنساعدك على زيادة أرباحك من خلال تخصيص متجرك باستخدام مميزاتنا المتقدمة مثل العروض المجمعة، الإضافات، والمنتجات المقترحة.
+                         </p>
+                      </div>
+                   </div>
                 </div>
-                <div className="shrink-0 bg-primary-500 p-8 rounded-3xl shadow-2xl shadow-primary-500/30 min-w-[220px] text-center transform group-hover:scale-105 transition-transform">
-                   <p className="text-white/80 text-sm font-black uppercase tracking-widest mb-2">بقيمة</p>
-                   <span className="text-3xl md:text-4xl font-black text-white">2,000 جنيه</span>
-                   <div className="mt-3 py-1 px-3 bg-white/20 rounded-lg text-xs font-black text-white uppercase tracking-wider">مجاناً لك الآن</div>
+
+                {/* Final Price Bundle Container (Now at bottom) */}
+                <div className=" flex flex-col md:flex-row items-center justify-between gap-8 bg-slate-950/80 p-3 rounded-2xl border-2 border-primary-500/40 shadow-2xl backdrop-blur-xl group-hover:border-primary-500/60 transition-all">
+                   <div className="text-center md:text-right">
+                      <p className="text-slate-500 text-lg font-black uppercase tracking-[0.2em] mb-2">القيمة الإجمالية لهذه الإضافات</p>
+                      <h4 className="text-2xl md:text-3xl font-black text-white">إعداد المتجر + جلسة استراتيجية</h4>
+                   </div>
+                   <div className="flex flex-col items-center gap-3">
+                      <div className="text-5xl md:text-3xl font-black text-white p-3 bg-primary-500/10 rounded-2xl border border-primary-500/30">
+                         1,500 <span className="text-2xl font-bold text-primary-500">جنية</span>
+                      </div>
+             
+                   </div>
                 </div>
              </div>
           </div>
