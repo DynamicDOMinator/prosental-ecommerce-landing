@@ -119,8 +119,16 @@ export default function Navbar() {
             ))}
           </ul>
           <div className="pt-2 px-4 pb-2">
-            <button className="w-full bg-primary-500 hover:bg-primary-600 text-white px-5 py-3 rounded-full font-bold text-base transition-all shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-              ابدأ الآن
+            <button
+              onClick={() => {
+                window.open(
+                  "https://calendly.com/midoalaa12345/consultation",
+                  "_blank",
+                );
+              }}
+              className="w-full bg-primary-500 hover:bg-primary-600 text-white px-5 py-3 rounded-full font-bold text-base transition-all shadow-[0_0_15px_rgba(16,185,129,0.3)]"
+            >
+              أحجز موعد شرائك
             </button>
           </div>
         </div>
