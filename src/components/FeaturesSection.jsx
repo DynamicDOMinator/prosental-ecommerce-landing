@@ -42,47 +42,49 @@ export default function FeaturesSection() {
           <p className="text-slate-400 text-xl leading-relaxed">باقة متكاملة تضمن لك النجاح من اليوم الأول، بدون تعقيدات تقنية.</p>
         </div>
         
-        <div className="grid grid-rows-2 grid-flow-col md:grid-rows-none md:grid-flow-row md:grid-cols-2 gap-4 lg:gap-8 max-w-6xl mx-auto overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-10 md:pb-0 px-8 md:px-0 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          {offerItems.map((item, i) => (
-            <div key={i} className="w-[280px] sm:w-[320px] md:w-auto shrink-0 snap-start bg-slate-900/40 border border-slate-800 p-6 md:p-8 rounded-3xl hover:border-primary-500/40 transition-all duration-300 group flex flex-col h-full">
-              <div className="flex items-start justify-between mb-4 md:mb-6">
-                <div className="p-3 bg-slate-950 rounded-2xl border border-slate-800 group-hover:bg-primary-500/10 group-hover:border-primary-500/20 transition-colors">
-                  {item.icon}
+        <div className="max-w-4xl mx-auto bg-slate-900/40 border border-slate-800 backdrop-blur-xl p-8 md:p-12 rounded-[3.5rem] shadow-2xl relative ring-1 ring-white/5">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary-500/10 blur-[120px] -z-10 rounded-full"></div>
+          
+          <ul className="space-y-10 md:space-y-12">
+            {offerItems.map((item, i) => (
+              <li key={i} className="flex items-start gap-6 md:gap-10 group">
+                {/* Custom Dot */}
+                <div className="mt-4 md:mt-5 shrink-0">
+                  <div className="w-2.5 h-2.5 rounded-full bg-primary-500 shadow-[0_0_15px_rgba(59,130,246,0.8)] group-hover:scale-150 transition-transform duration-500" />
                 </div>
-                {item.value && (
-                  <span className="px-4 py-1.5 bg-primary-500 text-white text-sm font-bold rounded-lg shadow-lg shadow-primary-500/20">
-                    {item.value}
-                  </span>
-                )}
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-white">{item.title}</h3>
-              <p className="text-slate-400 text-lg leading-relaxed grow">{item.description}</p>
-              <div className="mt-8 flex items-center gap-2 text-primary-500 font-bold">
-                 <CheckCircle2 className="w-5 h-5" />
-                 <span>مضمن في العرض</span>
-              </div>
-            </div>
-          ))}
+                
+                <div className="flex-1">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-3">
+                    <div className="flex items-center gap-5">
+                      <div className="p-3.5 bg-slate-950/80 border border-slate-800 rounded-2xl text-primary-500 group-hover:border-primary-500/40 group-hover:bg-primary-500/5 transition-all duration-300 shadow-inner">
+                        {item.icon}
+                      </div>
+                      <h3 className="text-2xl md:text-3xl font-black text-white group-hover:text-primary-500 transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                    </div>
+                    {item.value && (
+                      <div className="flex shrink-0">
+                        <span className="px-5 py-2 bg-primary-500 text-white text-sm font-black rounded-xl shadow-xl shadow-primary-500/20 self-start md:self-auto uppercase tracking-tighter">
+                          {item.value}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                  <p className="text-slate-400 text-lg md:text-xl leading-relaxed md:pr-10">
+                    {item.description}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* Pricing Summary */}
-        <div className="mt-20 max-w-2xl mx-auto bg-primary-500 p-[2px] rounded-4xl">
-           <div className="bg-slate-950 rounded-[calc(2.5rem-2px)] p-10 text-center relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-primary-500 to-transparent"></div>
-              <p className="text-slate-400 font-bold text-lg mb-4 line-through decoration-red-500/50 decoration-4">القيمة الإجمالية: 13,500 جنيه</p>
-              <div className="flex flex-col items-center gap-2">
-                 <span className="text-primary-500 font-black text-6xl md:text-7xl">10,000 <span className="text-2xl font-bold">جنيه</span></span>
-                 <p className="text-white font-bold text-xl mt-2 italic animate-bounce">احصل على العرض الآن قبل نفاذ الأماكن!</p>
-              </div>
-              <button className="mt-10 w-full md:w-auto px-12 py-5 bg-primary-500 text-white font-black text-xl rounded-2xl hover:bg-primary-600 transition-all shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:scale-105 cursor-pointer">
-                احصل على العرض الآن
-              </button>
-           </div>
-        </div>
+
 
         {/* New Book a Meeting Button */}
         <div className="mt-12 text-center">
-           <p className="text-slate-400 mb-6 text-lg">أو إذا كنت تفضل التحدث معنا أولاً:</p>
+        
            <button className="group relative inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-black text-xl rounded-2xl hover:bg-slate-100 transition-all hover:scale-105 shadow-xl shadow-white/5 cursor-pointer">
               <Calendar className="w-6 h-6" />
               <span>احجز موعداً للمناقشة</span>
