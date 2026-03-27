@@ -1,17 +1,21 @@
+import { TrendingUp, Zap, Smartphone, Sparkles } from "lucide-react";
+
 export default function BenefitsSection() {
   const benefits = [
     {
       title: "عائد اكبر لاعلاناتك",
+      icon: <TrendingUp className="w-10 h-10" />,
       content: (
         <p className="text-slate-400 text-xl md:text-2xl leading-relaxed font-medium">
           تطبيقات <span className="text-white font-black">upsell, bundles</span> لزيادة متوسط سعر الطلب
           <br />
-          صفحة <span className="text-white font-black">post purchase</span> لأقتراح منتجات <span className="text-primary-500 font-black">اضافية لعميلك</span> بعد عملية البيع الاولى
+          صفحة <span className="text-white font-black">post purchase</span> لأقتراح منتجات <span className="text-white  font-black">اضافية لعميلك</span> بعد عملية البيع الاولى
         </p>
       )
     },
     {
       title: "ميزات متقدمة",
+      icon: <Zap className="w-10 h-10" />,
       content: (
         <p className="text-slate-400 text-xl md:text-2xl leading-relaxed font-medium">
           امكانية انشاء حساب للعملاء لمتابعة اكثر من طلب
@@ -24,6 +28,7 @@ export default function BenefitsSection() {
     },
     {
       title: "سهولة الاستخدام",
+      icon: <Smartphone className="w-10 h-10" />,
       content: (
         <p className="text-slate-400 text-xl md:text-2xl leading-relaxed font-medium">
           التحكم الكامل فى اى وقت <span className="text-white font-black">عن طريق الهاتف</span>
@@ -36,6 +41,7 @@ export default function BenefitsSection() {
     },
     {
       title: "انطباع قوى و تجربة شراء فريدة لعميلك",
+      icon: <Sparkles className="w-10 h-10" />,
       content: (
         <p className="text-slate-400 text-xl md:text-2xl leading-relaxed font-medium">
           صفحة منتج سهلة مستوحاة من اكبر منصات التجارة كـ <span className="text-white font-black">amazon</span>
@@ -62,9 +68,14 @@ export default function BenefitsSection() {
         
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, i) => (
-            <div key={i} className="bg-slate-900/40 backdrop-blur-md border-2 border-slate-800 p-10 md:p-14 rounded-[3rem] hover:border-primary-500/30 transition-all duration-500 group flex flex-col items-center justify-center text-center relative overflow-hidden shadow-2xl">
+            <div key={i} className="bg-slate-900/40 backdrop-blur-md border-2 border-primary-500/30 p-10 md:p-14 rounded-[3rem] hover:border-primary-500/30 transition-all duration-500 group flex flex-col items-center justify-center text-center relative overflow-hidden shadow-2xl">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary-500/5 blur-3xl -z-10 group-hover:bg-primary-500/10 transition-colors"></div>
-              <h3 className="text-3xl md:text-4xl font-black mb-8 text-white group-hover:text-primary-500 transition-colors">{benefit.title}</h3>
+              
+              <div className="mb-6 p-4 bg-primary-500/10 rounded-2xl text-primary-500 shadow-inner group-hover:scale-110 group-hover:bg-primary-500/20 transition-all duration-300">
+                 {benefit.icon}
+              </div>
+
+              <h3 className="text-3xl md:text-4xl font-black mb-8 text-primary-500 group-hover:text-primary-500 transition-colors">{benefit.title}</h3>
               <div className="space-y-4">
                 {benefit.content}
               </div>

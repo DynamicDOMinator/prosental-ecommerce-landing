@@ -1,3 +1,4 @@
+"use client";
 import { PlayCircle } from "lucide-react";
 
 export default function HeroSection() {
@@ -6,7 +7,6 @@ export default function HeroSection() {
       <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-primary-500/10 to-transparent -z-10"></div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto space-y-8">
-        
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight md:leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-l from-primary-600 to-emerald-300">
               طوّر{" "}
@@ -14,9 +14,14 @@ export default function HeroSection() {
             علامتك التجارية
           </h1>
           <p className="text-xl md:text-2xl text-slate-100 font-medium leading-relaxed max-w-3xl mx-auto">
-            صفحة منتج <span className="text-primary-500 font-bold mx-1">سهلة على عميلك</span>,
-            اضافات <span className="text-primary-500 font-bold mx-1">تزود ارباحك</span>,
-            متابعة و تحديث سهل <span className="text-primary-500 font-bold mx-1">من هاتفك</span>
+            صفحة منتج{" "}
+            <span className="text-primary-500 font-bold mx-1">
+              سهلة على عميلك
+            </span>
+            , اضافات{" "}
+            <span className="text-primary-500 font-bold mx-1">تزود ارباحك</span>
+            , متابعة و تحديث سهل{" "}
+            <span className="text-primary-500 font-bold mx-1">من هاتفك</span>
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-6 text-slate-300 font-bold text-lg">
             <div className="flex items-center gap-2">
@@ -27,13 +32,25 @@ export default function HeroSection() {
               <div className="w-2 h-2 rounded-full bg-primary-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
               <span>0 اشتراكات شهرية للتطبيقات</span>
             </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-primary-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
+              <span>استضافة مجانية لمدة عام</span>
+            </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <button className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] w-full sm:w-auto">
+            <button className=" hover:bg-primary-600 text-white  px-8 py-4 rounded-full font-bold text-lg transition-all underline hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] w-full sm:w-auto">
               تصفح متجر العرض (Demo)
             </button>
-            <button className="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all w-full sm:w-auto text-center">
-              تعرف على المزيد
+            <button
+              onClick={() => {
+                window.open(
+                  "https://calendly.com/midoalaa12345/consultation",
+                  "_blank",
+                );
+              }}
+              className="bg-primary-500 cursor-pointer hover:bg-primary-600 border shadow-[0_0_30px_rgba(16,185,129,0.5)] border-slate-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all w-full sm:w-auto text-center"
+            >
+              أحجز موعد شرائك
             </button>
           </div>
         </div>
