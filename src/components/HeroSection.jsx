@@ -16,8 +16,20 @@ export default function HeroSection() {
             علامتك التجارية
           </h1>
           <p className="text-xl md:text-2xl text-slate-100 font-medium leading-relaxed max-w-3xl mx-auto">
-         صفحة منتج سهلة علي عميلك, اضافات تزود ارباحك , متابعة و تحديث سهل من هاتفك
+            صفحة منتج <span className="text-primary-500 font-bold mx-1">سهلة على عميلك</span>,
+            اضافات <span className="text-primary-500 font-bold mx-1">تزود ارباحك</span>,
+            متابعة و تحديث سهل <span className="text-primary-500 font-bold mx-1">من هاتفك</span>
           </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-6 text-slate-300 font-bold text-lg">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-primary-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
+              <span>0% نسبة على المبيعات</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-primary-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
+              <span>0 اشتراكات شهرية للتطبيقات</span>
+            </div>
+          </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <button className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] w-full sm:w-auto">
               تصفح متجر العرض (Demo)
