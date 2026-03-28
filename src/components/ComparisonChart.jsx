@@ -1,6 +1,58 @@
 import React from "react";
+import { Check, X } from "lucide-react";
 
 export default function ComparisonChart() {
+  const highlightNumbers = (str, colorClass) => {
+    if (typeof str !== "string") return str;
+    const parts = str.split(/([\d,]+)/);
+    return parts.map((part, i) => 
+      /[\d,]+/.test(part) ? (
+        <span key={i} className={`${colorClass} font-black mx-0.5`}>{part}</span>
+      ) : part
+    );
+  };
+
+  const renderCellContent = (text, isUs) => {
+    const numberColor = isUs ? "text-white" : "text-amber-400 underline decoration-amber-500/30 underline-offset-4";
+    
+    // Green/Check for positive answers
+    if (text === "نعم" || text === "تحكم كامل" || text === "مدمجة مجاناً وبتحكم كامل" || text === "مجهزة للتطوير") {
+      return (
+        <div className={`flex items-center justify-center gap-2 ${isUs ? "text-emerald-400" : "text-emerald-500/80"}`}>
+          <Check className="w-5 h-5 shrink-0" />
+          <span>{text}</span>
+        </div>
+      );
+    }
+    
+    // Red/X for negative answers or limitations
+    if (text === "غير متوفر" || text === "يحتاج إضافات" || text === "محدود") {
+      return (
+        <div className="flex items-center justify-center gap-2 text-rose-400/80">
+          <X className="w-5 h-5 shrink-0" />
+          <span>{text}</span>
+        </div>
+      );
+    }
+
+    // Handle 0% specifically as a positive
+    if (text === "0%") {
+        return (
+          <div className={`flex items-center justify-center gap-2 ${isUs ? "text-emerald-400" : "text-emerald-500/80"}`}>
+            <Check className="w-5 h-5 shrink-0" />
+            <span className="font-black">0%</span>
+          </div>
+        );
+    }
+
+    // General text with number highlighting
+    return (
+      <div className={isUs ? "text-slate-100" : "text-slate-300"}>
+        {highlightNumbers(text, numberColor)}
+      </div>
+    );
+  };
+
   return (
     <section className="py-24 bg-slate-950/50 border-y border-slate-800/50 relative">
       <div className="absolute -left-40 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary-500/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -40,17 +92,23 @@ export default function ComparisonChart() {
                   sh: "7,500 - 12,500 ج.م سنوياً إضافية", 
                   woo: "2,500 - 5,000 ج.م سنوياً إضافية" 
                 },
+                { 
+                  feature: "التكلفة الكلية (بالتقريب)", 
+                  us: "8,000 ج.م", 
+                  sh: "22,000 ~ 30,000 ج.م", 
+                  woo: "25,000 ~ 30,000 ج.م" 
+                },
               ].map((row, i, arr) => (
                 <tr key={i} className="group hover:bg-slate-800/30 transition-colors">
                   <td className="py-5 px-6 text-slate-100 font-bold group-hover:text-white transition-colors">{row.feature}</td>
-                  <td className={`py-5 px-6 bg-slate-800/40  text-center font-bold text-primary-400 ${i === arr.length - 1 ? "rounded-b-2xl" : ""}`}>
-                    {row.us}
+                  <td className={`py-5 px-6 bg-slate-800/40 text-center font-bold ${i === arr.length - 1 ? "rounded-b-2xl border-b border-primary-500/30" : ""}`}>
+                    {renderCellContent(row.us, true)}
                   </td>
                   <td className="py-5 px-6 text-center text-slate-300">
-                    {row.sh}
+                    {renderCellContent(row.sh, false)}
                   </td>
                   <td className="py-5 px-6 text-center text-slate-300">
-                    {row.woo}
+                    {renderCellContent(row.woo, false)}
                   </td>
                 </tr>
               ))}
@@ -61,3 +119,6 @@ export default function ComparisonChart() {
     </section>
   );
 }
+
+
+
