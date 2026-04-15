@@ -23,7 +23,7 @@ export default function Footer() {
       
       <div className="container mx-auto px-4 relative z-10">
         <h3 className="text-3xl font-black text-white mb-6 tracking-tighter">
-          Prosental <span className="text-primary-500">Template</span>
+        Tejjara <span className="text-primary-500">Template</span>
         </h3>
         <p className="text-slate-400 max-w-md mx-auto mb-10 text-lg font-medium leading-relaxed">
           الحل الأمثل والذكي لزيادة مبيعاتك في السوق المصري والوصول لقمة النجاح.
