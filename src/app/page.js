@@ -16,9 +16,9 @@ export default function Home() {
       <Navbar />
       <div id="hero"><HeroSection /></div>
       <div id="benefits"><BenefitsSection /></div>
-      <div id="comparison"><ComparisonChart /></div>
+      <div id="why-us"><ComparisonChart /></div>
       <div id="dashboard"><DashboardOverview /></div>
-      <div id="features"><FeaturesSection /></div>
+      <div id="priceing"><FeaturesSection /></div>
       {/* <div id="pricing"><PricingSection /></div> */}
       <div id="faq"><FaqSection /></div>
       <div id="custom-code"><CustomCodeSection /></div>

@@ -23,10 +23,10 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "الرئيسية", href: "#hero" },
-    { name: "الفوائد", href: "#benefits" },
-    { name: "المميزات", href: "#features" },
-    { name: "لوحة التحكم", href: "#dashboard" },
+    { name: "لم تختارنا؟", href: "#why-us" },
+    { name: "التسعير", href: "#priceing" },
     { name: "الأسئلة الشائعة", href: "#faq" },
+    { name: "برمجة خاصة", href: "#custom-code" },
   ];
 
   const handleLinkClick = (e, href) => {

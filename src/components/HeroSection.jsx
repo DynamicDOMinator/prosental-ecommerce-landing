@@ -38,7 +38,7 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <button className=" hover:bg-primary-600 text-white  px-8 py-4 rounded-full font-bold text-lg transition-all underline hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] w-full sm:w-auto">
+            <button onClick={() => window.open("https://ecommerce.prosental.com", "_blank")} className=" hover:bg-primary-600 cursor-pointer text-white  px-8 py-4 rounded-full font-bold text-lg transition-all underline hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] w-full sm:w-auto">
               تصفح متجر العرض (Demo)
             </button>
             <button
@@ -55,19 +55,16 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* VSL Video Placeholder */}
-        <div className="mt-16 mx-auto max-w-5xl rounded-3xl overflow-hidden border border-slate-800 bg-slate-900 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative aspect-video group cursor-pointer transition-transform hover:scale-[1.01] duration-500">
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/50 to-transparent z-10"></div>
-          <img
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80"
-            alt="Video Thumbnail"
-            className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay"
-          />
-          <div className="absolute inset-0 flex items-center justify-center z-20">
-            <div className="h-24 w-24 bg-primary-500/20 rounded-full flex items-center justify-center backdrop-blur-md group-hover:scale-110 group-hover:bg-primary-500/30 transition-all duration-300 border border-primary-500/30">
-              <PlayCircle className="w-12 h-12 text-primary-500 group-hover:text-primary-400" />
-            </div>
-          </div>
+        {/* VSL Video Container */}
+        <div className="mt-16 mx-auto max-w-[350px] md:max-w-[400px] rounded-[3rem] overflow-hidden border-[8px] border-slate-800 bg-slate-950 shadow-[0_20px_50px_rgba(16,185,129,0.2)] relative aspect-[9/16]">
+          <iframe
+            src="https://www.youtube.com/embed/WeGd77XwsKs?autoplay=1&mute=1&loop=1&playlist=WeGd77XwsKs&rel=0&modestbranding=1"
+            title="Prosental VSL"
+            className="absolute inset-0 w-full h-full"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </section>

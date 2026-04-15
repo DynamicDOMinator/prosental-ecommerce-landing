@@ -87,7 +87,7 @@ export default function ComparisonChart() {
                   woo: "مجاني + 50 دولار شهرياً (~2,500 ج.م استضافة)" 
                 },
                 { 
-                  feature: "تجميع المنتجات، الأبسل والنوافذ المنبثقة", 
+                  feature: "مميزات اضافية (product bundle , Frequently bought together, Upsell)", 
                   us: "مدمجة مجاناً وبتحكم كامل", 
                   sh: "7,500 - 12,500 ج.م سنوياً إضافية", 
                   woo: "2,500 - 5,000 ج.م سنوياً إضافية" 
