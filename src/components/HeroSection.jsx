@@ -58,7 +58,7 @@ export default function HeroSection() {
         {/* VSL Video Container */}
         <div className="mt-16 mx-auto max-w-[350px] md:max-w-[400px] rounded-[3rem] overflow-hidden border-[8px] border-slate-800 bg-slate-950 shadow-[0_20px_50px_rgba(16,185,129,0.2)] relative aspect-[9/16]">
           <iframe
-            src="https://www.youtube.com/embed/WeGd77XwsKs?autoplay=1&mute=1&loop=1&playlist=WeGd77XwsKs&rel=0&modestbranding=1"
+            src="https://www.youtube.com/embed/WeGd77XwsKs?autoplay=0&rel=0&modestbranding=1"
             title="Prosental VSL"
             className="absolute inset-0 w-full h-full"
             frameBorder="0"
